@@ -9,8 +9,9 @@ var splitArray = randomgen.split("");
 var clicks = [];
 // number of lives
 var maxtries = 8;
-// underscores same length as randomgenword
+// put clicks stuff in here
 var valuesArray = [];
+// underscores same length as randomgenword
  var answerArray = [];
  for (var i = 0; i < randomgen.length; i++) {
  answerArray[i] ="_"
@@ -26,30 +27,34 @@ console.log(randomgen.length);
 document.addEventListener('DOMContentLoaded',function(){
    clicks = document.getElementsByTagName("button");
     for (var i = 0; i < clicks.length; i++) {
-      valuesArray.push(clicks[i].value)
+      clicks.push(clicks[i].value)
       clicks[i].addEventListener("click", function(event){
-        replaceLetters();
-        // alert(this.value);
+        // replaceLetters();
+        console.log(this.value);
+        console.log(valuesArray)
+        console.log(clicks)
       });
     };
 });
+
 // function to replace underscore with correct letters if inocrrevct loose a life
-function replaceLetters(event){
-  var goodattempt = false;
-  console.log(splitArray.length);
-  for (var j =0; j<splitArray.length; j++){
-    console.log(valuesArray[j]);
-    // console.log(splitArray[j]);
-    if (valuesArray[j] == splitArray[j]){
-      answerArray[j] == splitArray[j]
-      goodattempt = true;
-    }
-  }
-  return goodattempt;
-}
-if (replaceLetters()==false) {
-  maxtries = maxtries-1
-};
+// function replaceLetters(event){
+//   var goodattempt = false;
+//   console.log(splitArray.length);
+//   for (var j =0; j<splitArray.length; j++){
+//     // console.log(valuesArray[j]);
+//     // console.log(splitArray[j]);
+//     if (valuesArray[j] == splitArray[j]){
+//       answerArray[j] == splitArray[j]
+//       goodattempt = true;
+//       // when I click a button alphabet until == splitArray[j] shows
+//       } console.log(valuesArray[j]);
+//   }
+//   return goodattempt;
+// }
+// if (replaceLetters()==false) {
+//   maxtries = maxtries-1
+// };
 
 
 // replaceLetters();
