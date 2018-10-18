@@ -20,9 +20,10 @@ var maxtries = 8;
   };
   // Place to store the letter
 var storeLetter = ""
+// to disable the buttons
+// var disablebuttons =""
 console.log(answerArray);
 console.log(splitArray);
-
 // display the underscores in the right place
 document.getElementById("underscores").innerHTML = answerArray ;
 console.log(randomgen.length);
@@ -32,17 +33,24 @@ document.addEventListener('DOMContentLoaded',function(){
    clicks = document.getElementsByTagName("button");
     for (var i = 0; i < clicks.length; i++) {
       clicks[i].addEventListener("click", function(event){
-        // variable store Letter store this.value temporarily
+        // trying to diable button once clicked
         storeLetter = this.value;
         replaceLetters();
+        disablebutton();
+        // variable store Letter store this.value temporarily
+        // disablebuttons = document.getElementsByTagName("button").diabled = true;
         // after function called for whatever to store on the screen
         // replace underscores with the right letter
         // document.getElementById("underscores").innerHTML += storeLetter;
       });
     };
 });
+ // function to disable button
+function disablebutton(button){
+document.getElementsByTagName("button").disabled = true };
 
 // function to replace underscore with correct letters if inocrrevct loose a life
+console.log(maxtries);
 function replaceLetters(event){
   var goodattempt = false;
   for (var j = 0; j<splitArray.length; j++){
@@ -51,21 +59,21 @@ function replaceLetters(event){
     // console.log("ST"+storeLetter);
     if (storeLetter == splitArray[j]){
       answerArray[j] = splitArray[j]
-      console.log("inside"+storeLetter);
-      console.log(answerArray);
       goodattempt = true;
-      // when I click a button alphabet until == splitArray[j] shows
       // and disable the button
     }
-
   }
-    console.log(answerArray);
+    // console.log(answerArray);
+    console.log(maxtries);
     document.getElementById("underscores").innerHTML = answerArray;
     return goodattempt;
-  if (replaceLetters()==false) {
-    maxtries = maxtries-1
-    alert("You have ran out of lives without guessing correctly. The word was + randomgen")
+
+  if (replaceLetters==false) {
+    maxtries=maxtries-1
+    // alert("You have ran out of lives without guessing correctly. The word was + randomgen")
+      console.log(maxtries);
     document.getElementById('lives').innerHTML = maxtries;
-  };
-  };
-  console.log(splitArray);
+  }; console.log(maxtries);
+};
+
+  // console.log(splitArray);
