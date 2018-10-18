@@ -37,6 +37,7 @@ document.addEventListener('DOMContentLoaded',function(){
         replaceLetters();
         disablebutton();
         livesdecrease()
+        loosealert()
         // variable store Letter store this.value temporarily
         // disablebuttons = document.getElementsByTagName("button").diabled = true;
         // after function called for whatever to store on the screen
@@ -72,3 +73,11 @@ function livesdecrease(){
     document.getElementById('lives').innerHTML= maxtries;
   }
 }
+
+function loosealert(){
+  if(maxtries==0){
+    alert("Unfortunately, you have not correctly guessed the word and you have no more lives.Try again")
+  }
+};
+
+function
