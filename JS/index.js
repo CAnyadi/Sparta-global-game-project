@@ -107,6 +107,6 @@ function compare(){
     };
   }
   if(compareletters == splitArray.length){
-    alert("well done youhefnbjsbfjs")
-  };
+    alert("well done you have correctly guessed the word")
 }
+};

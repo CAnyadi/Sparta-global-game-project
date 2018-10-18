@@ -7,13 +7,12 @@
 
   </head>
   <body>
+  <div class="top">
     <h1>Hangman Game</h1>
-
-
-    <div class="top">
-      <!-- <section class="clue-area">
-          <h2 id="Clue">Clue: Popular Action Movie</h2>
-      </section> -->
+    <div class="refresh">
+      <a href="javascript:location.reload(true)" id="refresh">Refresh the game</a>
+    </div>
+  </div>
       <div class="Instructions">
         <h3>Instructions</h3>
         <p> The aim of the game is to guess the word below letter by letter. You have 8 tries.
@@ -26,7 +25,7 @@
       </section>
 
       <section>
-        <p> you have <span id="lives">8</span> lives </p>
+        <p id=attempts> you have <span id="lives">8</span>   lives</p>
       </section>
 
     </div>
@@ -62,7 +61,7 @@
 
       </section>
       <div id="lostsection">
-        
+
       </div>
 
     </div>
