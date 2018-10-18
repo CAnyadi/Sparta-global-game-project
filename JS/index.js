@@ -33,7 +33,6 @@ document.addEventListener('DOMContentLoaded',function(){
    clicks = document.getElementsByTagName("button");
     for (var i = 0; i < clicks.length; i++) {
       clicks[i].addEventListener("click", function(event){
-        // trying to diable button once clicked
         storeLetter = this.value;
         replaceLetters();
         disablebutton();
@@ -49,31 +48,34 @@ document.addEventListener('DOMContentLoaded',function(){
 function disablebutton(button){
 document.getElementsByTagName("button").disabled = true };
 
-// function to replace underscore with correct letters if inocrrevct loose a life
-console.log(maxtries);
+// function to replace underscore with correct letters
 function replaceLetters(event){
+
   var goodattempt = false;
   for (var j = 0; j<splitArray.length; j++){
     // console.log(valuesArray[j]);
     // console.log(splitArray[j]);
     // console.log("ST"+storeLetter);
     if (storeLetter == splitArray[j]){
+      // replacing underscore with correct element in array
       answerArray[j] = splitArray[j]
       goodattempt = true;
-      // and disable the button
     }
   }
-    // console.log(answerArray);
+    console.log(answerArray);
+    console.log(storeLetter);
     console.log(maxtries);
     document.getElementById("underscores").innerHTML = answerArray;
     return goodattempt;
-
-  if (replaceLetters==false) {
-    maxtries=maxtries-1
-    // alert("You have ran out of lives without guessing correctly. The word was + randomgen")
-      console.log(maxtries);
-    document.getElementById('lives').innerHTML = maxtries;
-  }; console.log(maxtries);
 };
+// when it does not match anything in the array remove a life
+if (replaceLetters()==false){
+  maxtries = maxtries-1;
+};
+
+}
+
+
+
 
   // console.log(splitArray);
