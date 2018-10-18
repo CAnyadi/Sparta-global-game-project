@@ -20,8 +20,6 @@ var maxtries = 8;
   };
   // Place to store the letter
 var storeLetter = ""
-// to disable the buttons
-// var disablebuttons =""
 console.log(answerArray);
 console.log(splitArray);
 // display the underscores in the right place
@@ -33,22 +31,23 @@ document.addEventListener('DOMContentLoaded',function(){
    clicks = document.getElementsByTagName("button");
     for (var i = 0; i < clicks.length; i++) {
       clicks[i].addEventListener("click", function(event){
+// when clicked store clicked value in the variable
         storeLetter = this.value;
         replaceLetters();
-        disablebutton();
-        livesdecrease()
-        loosealert()
+        livesdecrease();
+        loosealert();
+        compare();
+        // winsalert();
+        // winalert();
+
         // variable store Letter store this.value temporarily
-        // disablebuttons = document.getElementsByTagName("button").diabled = true;
         // after function called for whatever to store on the screen
         // replace underscores with the right letter
         // document.getElementById("underscores").innerHTML += storeLetter;
       });
     };
 });
- // function to disable button
-function disablebutton(button){
-document.getElementsByTagName("button").disabled = true };
+
 
 // function to replace underscore with correct letters if inocrrevct loose a life
 function replaceLetters(event){
@@ -79,5 +78,35 @@ function loosealert(){
     alert("Unfortunately, you have not correctly guessed the word and you have no more lives.Try again")
   }
 };
+console.log(answerArray);
+console.log(splitArray);
 
-function
+
+ // function compare(){
+// //   var joinanswer = answerArray.join();
+// //   console.log(joinanswer);
+// //
+// //   var joinsplit = splitArray.join();
+// //   console.log(joinsplit);
+// //   if (joinanswer == joinsplit){
+// //     console.log(joinsplit);
+// //     console.log(joinanswer);
+// //     alert("well done you have successfully guessed the word with X lives remaining")
+// //   }
+// }
+function compare(){
+  // this is to distinguish between when you compare and its the same and when it is not
+  var compareletters = 0;
+  for(var j = 0; j<splitArray.length; j++){
+    if(answerArray[j] == splitArray[j]){
+      compareletters = compareletters +1
+      // loop go again
+      // remember that nothing works (after) return
+      // return true
+      console.log(compareletters);
+    };
+  }
+  if(compareletters == splitArray.length){
+    alert("well done youhefnbjsbfjs")
+  };
+}
