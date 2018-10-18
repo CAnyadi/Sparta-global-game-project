@@ -36,6 +36,7 @@ document.addEventListener('DOMContentLoaded',function(){
         storeLetter = this.value;
         replaceLetters();
         disablebutton();
+        livesdecrease()
         // variable store Letter store this.value temporarily
         // disablebuttons = document.getElementsByTagName("button").diabled = true;
         // after function called for whatever to store on the screen
@@ -48,9 +49,8 @@ document.addEventListener('DOMContentLoaded',function(){
 function disablebutton(button){
 document.getElementsByTagName("button").disabled = true };
 
-// function to replace underscore with correct letters
+// function to replace underscore with correct letters if inocrrevct loose a life
 function replaceLetters(event){
-
   var goodattempt = false;
   for (var j = 0; j<splitArray.length; j++){
     // console.log(valuesArray[j]);
@@ -61,21 +61,14 @@ function replaceLetters(event){
       answerArray[j] = splitArray[j]
       goodattempt = true;
     }
+
   }
-    console.log(answerArray);
-    console.log(storeLetter);
-    console.log(maxtries);
     document.getElementById("underscores").innerHTML = answerArray;
     return goodattempt;
 };
-// when it does not match anything in the array remove a life
-if (replaceLetters()==false){
-  maxtries = maxtries-1;
-};
-
+function livesdecrease(){
+  if(replaceLetters()==false){
+    maxtries=maxtries-1
+    document.getElementById('lives').innerHTML= maxtries;
+  }
 }
-
-
-
-
-  // console.log(splitArray);
