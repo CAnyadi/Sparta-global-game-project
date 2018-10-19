@@ -71,7 +71,7 @@ function loosealert(){
   if(maxtries==0){
     // comes up after 50 milliseconds
     setTimeout(function(){
-    alert("Unfortunately, you have not correctly guessed the word and you have no more lives.Try again");
+    alert("Unfortunately, you have not correctly guessed the word and you have no more lives.Click Refresh the game to play again");
   }, 50)
   }
 };
