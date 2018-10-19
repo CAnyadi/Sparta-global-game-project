@@ -5,6 +5,9 @@ body {
   color: white ;
 }
 
+h3 {
+  text-decoration: underline;
+}
 .top {
 background-color: #ACDCC8;
 /* width: 700px;
@@ -12,10 +15,11 @@ height: 130px; */
 }
 
 .instructions {
-  margin-left: auto;
-  margin-right: auto;
-  width: 5px;
-  height: 100px;
+  margin-left: 34%;
+  margin-right: 34%;
+  width: 15%;
+  height: 10%;
+  text-align: center;
 }
 #refresh{
 color:#DC56A1

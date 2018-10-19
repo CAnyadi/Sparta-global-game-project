@@ -1,5 +1,5 @@
 // array of words to guess
-var answers = ["fastandfurious","namibia","shondarhimes"]
+var answers = ["fastandfurious","namibia","shondarhimes","zebra","chicken","Atlanta"]
 // random gen of answers array
 var randomgen = answers[Math.floor(Math.random()* answers.length)];
 console.log(randomgen);
@@ -37,13 +37,6 @@ document.addEventListener('DOMContentLoaded',function(){
         livesdecrease();
         loosealert();
         compare();
-        // winsalert();
-        // winalert();
-
-        // variable store Letter store this.value temporarily
-        // after function called for whatever to store on the screen
-        // replace underscores with the right letter
-        // document.getElementById("underscores").innerHTML += storeLetter;
       });
     };
 });
@@ -66,16 +59,20 @@ function replaceLetters(event){
     document.getElementById("underscores").innerHTML = answerArray;
     return goodattempt;
 };
+// function for for lives to decrease once incorrect letter is clicked
 function livesdecrease(){
   if(replaceLetters()==false){
     maxtries=maxtries-1
     document.getElementById('lives').innerHTML= maxtries;
   }
 }
-
+// function when the player looses
 function loosealert(){
   if(maxtries==0){
-    alert("Unfortunately, you have not correctly guessed the word and you have no more lives.Try again")
+    // comes up after 50 milliseconds
+    setTimeout(function(){
+    alert("Unfortunately, you have not correctly guessed the word and you have no more lives.Try again");
+  }, 50)
   }
 };
 console.log(answerArray);
@@ -93,7 +90,7 @@ console.log(splitArray);
 // //     console.log(joinanswer);
 // //     alert("well done you have successfully guessed the word with X lives remaining")
 // //   }
-// }
+// function to compare letter to array- if correct replace underscore with letter
 function compare(){
   // this is to distinguish between when you compare and its the same and when it is not
   var compareletters = 0;
@@ -107,6 +104,9 @@ function compare(){
     };
   }
   if(compareletters == splitArray.length){
-    alert("well done you have correctly guessed the word")
+    setTimeout(function(){
+    alert("Well done you have correctly guessed the word");
+  }, 50)
+
 }
 };
