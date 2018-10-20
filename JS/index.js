@@ -1,7 +1,7 @@
 // array of words to guess
 var answers = ["fastandfurious","namibia","shondarhimes","zebra","chicken","Atlanta"]
 // random gen of answers array
-var randomgen = answers[Math.floor(Math.random()* answers.length)];
+var randomgen = answers[Math.floor(Math.random()*answers.length)];
 console.log(randomgen);
 
 // turning the lower case to upper so one can compare later
@@ -18,6 +18,33 @@ var maxtries = 8;
  for (var i = 0; i < randomgen.length; i++) {
  answerArray[i] ="_"
   };
+  // clues array
+  var cluesArray = ["Popular Action Film", "Country In South Africa","TV Series Director","Zoo Animal", "Animal","State In America"]
+
+// switch for the clues
+switch (randomgen) {
+  case 'fastandfurious':
+  console.log(cluesArray[0]);
+  break;
+  case 'namibia':
+  console.log('cluesArray[1]');
+  break;
+  case 'shondarhimes':
+  console.log('cluesArray[2]');
+  break;
+  case 'zebra':
+  console.log('cluesArray[3]');
+  break;
+  case 'chicken':
+  console.log('cluesArray[4]');
+  break;
+  case 'Atlanta':
+  console.log('cluesArray[5]');
+  break;
+  default;
+  console.log('no clues available');
+}
+
   // Place to store the letter
 var storeLetter = ""
 console.log(answerArray);
