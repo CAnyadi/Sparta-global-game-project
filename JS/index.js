@@ -19,32 +19,31 @@ var maxtries = 8;
  answerArray[i] ="_"
   };
   // clues array
-  var cluesArray = ["Popular Action Film", "Country In South Africa","TV Series Director","Zoo Animal", "Animal","State In America"]
+  var cluesArray = ["Popular Action Film", "Country In South Africa","TV Series Director","Zoo Animal", "Animal","State In America"];
 
-// switch for the clues
-switch (randomgen) {
-  case 'fastandfurious':
-  console.log(cluesArray[0]);
-  break;
-  case 'namibia':
-  console.log('cluesArray[1]');
-  break;
-  case 'shondarhimes':
-  console.log('cluesArray[2]');
-  break;
-  case 'zebra':
-  console.log('cluesArray[3]');
-  break;
-  case 'chicken':
-  console.log('cluesArray[4]');
-  break;
-  case 'Atlanta':
-  console.log('cluesArray[5]');
-  break;
-  default;
-  console.log('no clues available');
-}
-
+// switch for the clues. doen't work but shoes in replt
+// switch(randomgen) {
+//   case 'fastandfurious':
+//   console.log('Popular Action Film');
+//   break;
+//   case 'namibia':
+//   console.log('Country In South Africa');
+//   break;
+//   case 'shondarhimes':
+//   console.log('TV Series Director');
+//   break;
+//   case 'zebra':
+//   console.log('Zoo Animal');
+//   break;
+//   case 'chicken':
+//   console.log('Animal');
+//   break;
+//   case 'Atlanta':
+//   console.log('State in America');
+//   break;
+//   default:
+//   console.log('no clues available');
+// }
   // Place to store the letter
 var storeLetter = ""
 console.log(answerArray);
@@ -64,6 +63,7 @@ document.addEventListener('DOMContentLoaded',function(){
         livesdecrease();
         loosealert();
         compare();
+        cluefunction();
       });
     };
 });
@@ -136,4 +136,10 @@ function compare(){
   }, 50)
 
 }
+};
+function cluefunction(){
+  if(randomgen == 'fastandfurious'){
+    document.getElementById("clue").innerHTML= "Popular Action Movie"
+    alert("clue: Popular Action Movie")
+  };
 };
