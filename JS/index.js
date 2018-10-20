@@ -6,7 +6,7 @@ console.log(randomgen);
 
 // turning the lower case to upper so one can compare later
 randomgen = randomgen.toUpperCase()
-
+console.log(randomgen);
 // turn the string of random word into an array of its elements (so we can compare)
 var splitArray = randomgen.split("");
 // Putting clicks variable up here so it can be accessed in function and in DOM
@@ -22,28 +22,29 @@ var maxtries = 8;
   var cluesArray = ["Popular Action Film", "Country In South Africa","TV Series Director","Zoo Animal", "Animal","State In America"];
 
 // switch for the clues. doen't work but shoes in replt
-// switch(randomgen) {
-//   case 'fastandfurious':
-//   console.log('Popular Action Film');
-//   break;
-//   case 'namibia':
-//   console.log('Country In South Africa');
-//   break;
-//   case 'shondarhimes':
-//   console.log('TV Series Director');
-//   break;
-//   case 'zebra':
-//   console.log('Zoo Animal');
-//   break;
-//   case 'chicken':
-//   console.log('Animal');
-//   break;
-//   case 'Atlanta':
-//   console.log('State in America');
-//   break;
-//   default:
-//   console.log('no clues available');
-// }
+
+switch(randomgen) {
+  case 'FASTANDFURIOUS':
+  console.log('Popular Action Film');
+  break;
+  case 'NAMIBIA':
+  console.log('Country In South Africa');
+  break;
+  case 'SHONDARHIMES':
+  console.log('TV Series Director');
+  break;
+  case 'ZEBRA':
+  console.log('Zoo Animal');
+  break;
+  case 'CHICKEN':
+  console.log('Animal');
+  break;
+  case 'ATLANTA':
+  console.log('State in America');
+  break;
+  default:
+  console.log('no clues available');
+}
   // Place to store the letter
 var storeLetter = ""
 console.log(answerArray);
@@ -134,12 +135,29 @@ function compare(){
     setTimeout(function(){
     alert("Well done you have correctly guessed the word");
   }, 50)
-
 }
 };
-function cluefunction(){
-  if(randomgen == 'fastandfurious'){
-    document.getElementById("clue").innerHTML= "Popular Action Movie"
-    alert("clue: Popular Action Movie")
-  };
-};
+// function cluefunction(randomgen){
+//   var cluefunction;
+//     switch(randomgen){
+//       case "fastandfurious":
+//       cluefunction= "Popular Action Movie";
+//       break;
+//       case "namibia":
+//       cluefunction: "Country in the Southern area of Africa"
+//       break;
+//       case "shondarhimes":
+//       cluefunction="TV series director"
+//       break;
+//       case "zebra":
+//       console.log("Zoo Animal");
+//       break;
+//       case "chicken":
+//       console.log("Animal");
+//       break;
+//       case "Atlanta":
+//       console.log("State in America");
+//       break;
+//       default: console.log("error");
+//     }
+// };
