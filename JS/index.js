@@ -24,23 +24,29 @@ var maxtries = 8;
 // switch for the clues. doen't work but shoes in replt
 
 switch(randomgen) {
+  // var clueresult
   case 'FASTANDFURIOUS':
-  console.log('Popular Action Film');
+   document.getElementById("clue").innerHTML = "Popular Action Movie";
   break;
   case 'NAMIBIA':
-  console.log('Country In South Africa');
+  // console.log('Country In South Africa');
+  document.getElementById("clue").innerHTML = "Country In South Africa";
   break;
   case 'SHONDARHIMES':
-  console.log('TV Series Director');
+  // console.log('TV Series Director');
+  document.getElementById("clue").innerHTML = "TV Series Director";
   break;
   case 'ZEBRA':
-  console.log('Zoo Animal');
+  // console.log('Zoo Animal');
+  document.getElementById("clue").innerHTML = "Zoo Animal";
   break;
   case 'CHICKEN':
-  console.log('Animal');
+  // console.log('Animal');
+  document.getElementById("clue").innerHTML = "Animal";
   break;
   case 'ATLANTA':
-  console.log('State in America');
+  // console.log('State in America');
+  document.getElementById("clue").innerHTML = "State in America";
   break;
   default:
   console.log('no clues available');
@@ -55,7 +61,7 @@ console.log(randomgen.length);
 
 // clickable letters
 document.addEventListener('DOMContentLoaded',function(){
-   clicks = document.getElementsByTagName("button");
+   clicks = document.getElementsByClassName('Alphabet')
     for (var i = 0; i < clicks.length; i++) {
       clicks[i].addEventListener("click", function(event){
 // when clicked store clicked value in the variable
@@ -64,10 +70,28 @@ document.addEventListener('DOMContentLoaded',function(){
         livesdecrease();
         loosealert();
         compare();
-        cluefunction();
+        // document.getElementsByTagName("button".disabled) = true;
       });
     };
 });
+    // function to hide and show instructions
+  function Insfunc() {
+    var x = document.getElementById("instructions");
+    // if the is no style display assign to block i.e put the text there
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    }
+    // if block or anything else assign to none
+    else {
+      x.style.display = "none"
+    }
+  }
+    // attemptt of using the event listener to get the instructions button to show/hide
+    // document.getElementById('instructions-title').addEventListener("click",function(event){
+    //
+    // })
+// });
+// instruction button
 
 
 // function to replace underscore with correct letters if inocrrevct loose a life
@@ -137,6 +161,7 @@ function compare(){
   }, 50)
 }
 };
+
 // function cluefunction(randomgen){
 //   var cluefunction;
 //     switch(randomgen){
