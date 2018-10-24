@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Hangman Game</title>
+    <link rel="stylesheet" href="../CSS/index.css">
+
+  </head>
+  <body>
+  <div class="top">
+    <h1>Hangman Game</h1>
+    <div class="refresh">
+      <a href="javascript:location.reload(true)" id="refresh">Refresh the game</a>
+      <!-- <img src="./refresh.jpg" alt="image of a refresh button"> -->
+    </div>
+  </div>
+      <div class="Instructions">
+        <!-- <h3 id="instructions-title">Instructions</h3> -->
+        <button  onclick="Insfunc()">Instructions</button>
+        <p id="instructions"> The aim of the game is to guess the word below letter by letter.<br>You have 8 tries.
+        If you get a letter right it'll show up. If not you'll loose a life.<br> The aim is to guess the word correctly before loosing all your lives. <br>Click a letter below to start the game</p>
+      </div>
+
+      <div class="clue-section">
+        <p>Clue:  <span id="clue">wejdhvhgvewhv</span>     </p>
+      </div>
+
+      <section>
+        <p id=underscores>hjrbgrjhbsgfjgjh </p>
+      </section>
+
+      <section>
+        <p id=attempts> you have <span id="lives">8</span>   lives</p>
+      </section>
+
+    </div>
+    <div class="bottom">
+      <section class="Alphabet">
+
+        <button class="Alphabet"name="button" value="A">A</button>
+        <button class="Alphabet"name="button" value="B">B</button>
+        <button class="Alphabet"name="button" value="C">C</button>
+        <button class="Alphabet"name="button" value="D">D</button>
+        <button class="Alphabet"name="button" value="E">E</button>
+        <button class="Alphabet"name="button" value="F">F</button>
+        <button class="Alphabet"name="button" value="G">G</button>
+        <button class="Alphabet"name="button" value="H">H</button>
+        <button class="Alphabet"name="button" value="I">I</button>
+        <button class="Alphabet"name="button" value="J">J</button>
+        <button class="Alphabet"name="button" value="K">K</button>
+        <button class="Alphabet"name="button" value="L">L</button>
+        <button class="Alphabet"name="button" value="M">M</button>
+        <button class="Alphabet"name="button" value="N">N</button>
+        <button class="Alphabet"name="button" value="O">O</button>
+        <button class="Alphabet"name="button" value="P">P</button>
+        <button class="Alphabet"name="button" value="Q">Q</button>
+        <button class="Alphabet"name="button" value="R">R</button>
+        <button class="Alphabet"name="button" value="S">S</button>
+        <button class="Alphabet"name="button" value="T">T</button>
+        <button class="Alphabet"name="button" value="U">U</button>
+        <button class="Alphabet"name="button" value="V">V</button>
+        <button class="Alphabet"name="button" value="W">W</button>
+        <button class="Alphabet"name="button" value="X">X</button>
+        <button class="Alphabet"name="button" value="Y">Y</button>
+        <button class="Alphabet"name="button" value="Z">Z</button>
+
+      </section>
+      <div id="lostsection">
+
+      </div>
+
+    </div>
+    <script type="text/javascript"src= "../JS/index.js"></script>
+  </body>
+</html>
